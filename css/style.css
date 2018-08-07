@@ -1,0 +1,66 @@
+#container {
+  display: grid;
+  grid-template-columns: 1fr 10fr; }
+
+header {
+  background-color: lightblue;
+  display: grid;
+  height: 150px; }
+  header .brand {
+    background-color: red; }
+  header .nav {
+    background-color: blue; }
+  header .contenu {
+    background-color: green; }
+  header .header_aside {
+    background-color: grey; }
+
+main {
+  background-color: lightgreen; }
+  main .article1 {
+    display: grid;
+    padding: 1rem;
+    grid-gap: 2rem; }
+
+.main_aside {
+  background-color: lightgrey;
+  grid-row: 1/4; }
+
+footer {
+  background-color: purple;
+  height: 150px; }
+
+@media screen and (min-width: 720px) {
+  header {
+    grid-template-columns: 1fr 6fr; }
+    header .brand {
+      grid-column: 1/3; }
+    header .header_aside {
+      grid-row: 2/4; } }
+@media screen and (min-width: 1080px) {
+  main {
+    background-color: lightgreen; }
+    main .article1 {
+      display: grid;
+      grid-gap: 0.5rem;
+      grid-template-areas: "p1 p1 p3 p4" "p1 p1 p3 p4" "p1 p1 p5 p5" "p2 p2 p6 p6"; }
+      main .article1 .p1 {
+        grid-area: p1;
+        background-color: grey; }
+      main .article1 .p2 {
+        grid-area: p2;
+        background-color: grey; }
+      main .article1 .p3 {
+        grid-area: p3;
+        background-color: grey; }
+      main .article1 .p4 {
+        grid-area: p4;
+        background-color: grey; }
+      main .article1 .p5 {
+        grid-area: p5;
+        background-color: grey; }
+      main .article1 .p6 {
+        grid-area: p6;
+        background-color: grey; } }
+
+/*# sourceMappingURL=style.css.map */
