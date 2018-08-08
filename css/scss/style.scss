@@ -33,9 +33,6 @@ header{
         }
       }
     }
-    .contenu{
-        background-color: green;
-    }
     .header_aside{
         background-color: #333333;
         .btn{
@@ -52,17 +49,65 @@ header{
 // ==============MAIN============= //
 
 main{
-    background-color: lightgreen;
     padding: 1rem;
   section {
     h2 {
       font-size: 2rem;
     padding: 0.5rem 1rem;
+    color: red;
+    font-weight: bold;
+    }
+    article {
+      img {
+        width: 100%;
+      }
+      h5 {
+        font-size: 2rem;
+        padding:1rem;
+        font-weight: bold;
+      }
+      p {
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
+      span {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        p {
+          font-weight: bold;
+        }
+      }
+      .p1, .p4 {
+        span {
+          p {
+          color:green;
+          }
+        }
+      }
+      .p2, .p5 {
+        span {
+          p {
+          color: orange;
+          }
+        }
+      }
+      .p3, .p6 {
+        span {
+          p {
+          color:blue;
+          }
+        }
+      }
     }
     .article1{
       display: grid;
       grid-gap: 2rem;
       grid-auto-rows: minmax(100px, auto);
+      div {
+      border:solid rgb(170, 170, 170) 0.5px;
+      }
     }
     .article2 {
       display: grid;
@@ -198,11 +243,10 @@ footer{
 
 @media screen and (min-width: 1080px) {
   #container{
-    width: 80%;
+    // width: 80%;
     margin: auto;
   }
   main{
-    background-color: lightgreen;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -211,33 +255,56 @@ footer{
       .article1{
             display: grid;
             grid-gap: 0.5rem;
-            grid-template-areas: "p1 p1 p3 p4"
+            grid-template-rows: repeat(4, 0.8fr);
+            grid-template-areas:
+            "p1 p1 p3 p4"
             "p1 p1 p3 p4"
             "p1 p1 p5 p5"
             "p2 p2 p6 p6";
             .p1{
                 grid-area: p1;
-                background-color: grey;
+                img {
+                  height: 60%;
+                }
             }
             .p2{
                 grid-area: p2;
-                background-color: grey;
+                img {
+                  float: left;
+                  width: 40%;
+                  height: 100%;
+                  margin-right: 1rem;
+                }
             }
             .p3{
                 grid-area: p3;
-                background-color: grey;
+                img {
+                  height: 40%;
+                }
             }
             .p4{
                 grid-area: p4;
-                background-color: grey;
+                img {
+                  height: 40%;
+                }
             }
             .p5{
                 grid-area: p5;
-                background-color: grey;
+                img {
+                  float: left;
+                  width: 40%;
+                  height: 100%;
+                  margin-right: 1rem;
+                }
             }
             .p6{
                 grid-area: p6;
-                background-color: grey;
+                img {
+                  float: left;
+                  width: 40%;
+                  height: 100%;
+                  margin-right: 1rem;
+                }
             }
           }
       }

@@ -20,8 +20,6 @@ header {
       text-align: center; }
       header .brand span p {
         margin-right: 1rem; }
-  header .contenu {
-    background-color: green; }
   header .header_aside {
     background-color: #333333; }
     header .header_aside .btn {
@@ -32,15 +30,40 @@ header {
       margin-right: 1rem; }
 
 main {
-  background-color: lightgreen;
   padding: 1rem; }
   main section h2 {
     font-size: 2rem;
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 1rem;
+    color: red;
+    font-weight: bold; }
+  main section article img {
+    width: 100%; }
+  main section article h5 {
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: bold; }
+  main section article p {
+    margin-right: 1rem;
+    margin-left: 1rem; }
+  main section article span {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    margin-left: 1rem; }
+    main section article span p {
+      font-weight: bold; }
+  main section article .p1 span p, main section article .p4 span p {
+    color: green; }
+  main section article .p2 span p, main section article .p5 span p {
+    color: orange; }
+  main section article .p3 span p, main section article .p6 span p {
+    color: blue; }
   main section .article1 {
     display: grid;
     grid-gap: 2rem;
     grid-auto-rows: minmax(100px, auto); }
+    main section .article1 div {
+      border: solid #aaaaaa 0.5px; }
   main section .article2 {
     display: grid;
     grid-auto-rows: minmax(100px, auto); }
@@ -123,11 +146,9 @@ footer {
     grid-template-columns: repeat(2, 1fr); } }
 @media screen and (min-width: 1080px) {
   #container {
-    width: 80%;
     margin: auto; }
 
   main {
-    background-color: lightgreen;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 1fr; }
@@ -136,25 +157,41 @@ footer {
       main .wrapper-article1 .article1 {
         display: grid;
         grid-gap: 0.5rem;
+        grid-template-rows: repeat(4, 0.8fr);
         grid-template-areas: "p1 p1 p3 p4" "p1 p1 p3 p4" "p1 p1 p5 p5" "p2 p2 p6 p6"; }
         main .wrapper-article1 .article1 .p1 {
-          grid-area: p1;
-          background-color: grey; }
+          grid-area: p1; }
+          main .wrapper-article1 .article1 .p1 img {
+            height: 60%; }
         main .wrapper-article1 .article1 .p2 {
-          grid-area: p2;
-          background-color: grey; }
+          grid-area: p2; }
+          main .wrapper-article1 .article1 .p2 img {
+            float: left;
+            width: 40%;
+            height: 100%;
+            margin-right: 1rem; }
         main .wrapper-article1 .article1 .p3 {
-          grid-area: p3;
-          background-color: grey; }
+          grid-area: p3; }
+          main .wrapper-article1 .article1 .p3 img {
+            height: 40%; }
         main .wrapper-article1 .article1 .p4 {
-          grid-area: p4;
-          background-color: grey; }
+          grid-area: p4; }
+          main .wrapper-article1 .article1 .p4 img {
+            height: 40%; }
         main .wrapper-article1 .article1 .p5 {
-          grid-area: p5;
-          background-color: grey; }
+          grid-area: p5; }
+          main .wrapper-article1 .article1 .p5 img {
+            float: left;
+            width: 40%;
+            height: 100%;
+            margin-right: 1rem; }
         main .wrapper-article1 .article1 .p6 {
-          grid-area: p6;
-          background-color: grey; }
+          grid-area: p6; }
+          main .wrapper-article1 .article1 .p6 img {
+            float: left;
+            width: 40%;
+            height: 100%;
+            margin-right: 1rem; }
     main .wrapper-article2 {
       grid-column: 1/3; }
       main .wrapper-article2 .article2 {
