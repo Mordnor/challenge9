@@ -119,7 +119,7 @@ main{
     }
     .article4 {
       display: grid;
-      grid-auto-rows: minmax(100px, auto);
+      grid-auto-rows: minmax(100%, auto);
     }
     .article5{
       display: grid;
@@ -220,7 +220,7 @@ footer{
         .wrapper-article2{
           .article2 {
             grid-template-columns: repeat(2 , 1fr);
-            text-align: center;
+            // text-align: center;
             :last-child {
               grid-column: 1/3;
             }
@@ -321,6 +321,7 @@ footer{
     }
     .wrapper-article4{
       .article4 {
+        grid-template-rows: repeat(2,1fr);
         grid-template-columns: repeat(4, 1fr);
       }
     }
