@@ -5,14 +5,23 @@
     grid-template-columns: 1fr 10fr;
 }
 div {
-  border:0.5px solid black;
+  // border:0.5px solid black;
 }
 // ==============HEADER============= //
 
 header{
-    background-color: lightblue;
     display: grid;
+    .navbar{
+      padding: 0;
+      button{
+        width: 100%;
+      }
+      ul{
+        text-transform: uppercase;
+      }
+    }
     .brand{
+      background-color: #efefef;
       padding: 0.5rem;
       display: flex;
       flex-direction: column;
@@ -24,14 +33,19 @@ header{
         }
       }
     }
-    .nav{
-        background-color: blue;
-    }
     .contenu{
         background-color: green;
     }
     .header_aside{
-        background-color: grey;
+        background-color: #333333;
+        .btn{
+          text-transform: uppercase;
+          color: black;
+          font-weight: bold;
+        }
+        i{
+          margin-right: 1rem;
+        }
     }
 }
 
@@ -74,8 +88,14 @@ main{
 // ==============ASIDE============= //
 
 .main_aside{
-    background-color: lightgrey;
+    background-color: #e1001a;
     grid-row: 1/4;
+    i{
+      display: block;
+      width: 25%;
+      margin: 2rem auto;
+      color: white;
+    }
 }
 
 
@@ -94,9 +114,46 @@ footer{
 
 // ==============MEDIA============= //
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
+  #container{
+    grid-template-columns: 1fr 20fr;
+  }
     header{
-        grid-template-columns: 1fr 6fr;
+      grid-template-columns: 1fr 7fr;
+      .navbar{
+          padding: 0;
+          ul{
+            .nav1{
+              background-color: #97c300;
+            }
+            .nav2{
+              background-color: #00adc1;
+            }
+            .nav3{
+              background-color: #ff7437;
+            }
+            .nav4{
+              background-color: #994dd1;
+            }
+            .nav5{
+              background-color: #f0f0f0;
+              width: 10%;
+            }
+            text-align: center;
+            justify-content: space-between;
+            width: 100%;
+            li{
+              line-height: 4;
+              font-size: 0.8rem;
+              width: 25%;
+              ::after{
+                display: block;
+                margin: auto;
+              }
+            }
+          }
+      }
+
         .brand{
             grid-column: 2/3;
             flex-direction: row;
@@ -110,6 +167,8 @@ footer{
         }
         .header_aside{
             grid-row: 1/4;
+            display: flex;
+            align-items: flex-end;
         }
     }
     main {
@@ -138,6 +197,10 @@ footer{
 }
 
 @media screen and (min-width: 1080px) {
+  #container{
+    width: 80%;
+    margin: auto;
+  }
   main{
     background-color: lightgreen;
     display: grid;
